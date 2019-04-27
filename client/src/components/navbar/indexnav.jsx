@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import "../../../app/assets/stylesheets/navbar/navbar.css"";
+import Signup from "../modals/signup_modal";
 
 const Navbar = () => {
   const indexPageNavbar = () => {
@@ -13,10 +14,8 @@ const Navbar = () => {
           </section>
         </Link>
         <div className="right-nav">
-          <nav className="login-signup">
-            <button className="signup-login-btn">Signup</button>
+            <Signup />
             <button className="signup-login-btn">Login</button>
-          </nav>
         </div>
       </div>
     );

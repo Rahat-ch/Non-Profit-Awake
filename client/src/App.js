@@ -12,10 +12,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <header className="App-header" id="top-of-page">
-        <Route path="/" component={Navbar} />
-      </header>
-    </BrowserRouter>
+        <header className="App-header" id="top-of-page">
+          <Route path="/" component={Navbar} />
+        </header>
+      </BrowserRouter>
     </div>
   );
 }
