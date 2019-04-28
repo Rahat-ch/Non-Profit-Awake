@@ -2,7 +2,7 @@ import { gql } from 'apollo-server-express';
 
 export default gql`
   extend type Query {
-    articles(cursor: String, limit: Int): ArticleConnection!
+    articles: [Article!] !
     article(id: ID!): Article!
   }
   extend type Mutation {

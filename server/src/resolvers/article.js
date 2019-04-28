@@ -8,47 +8,17 @@ const toCursorHash = string =>
 
 export default {
   Query: {
-    articles: async (parent, {
-      cursor,
-      limit = 100
-    }, {
+    articles: async (parent, args, {
       models
     }) => {
-      const cursorOptions = cursor
-      ? {
-        where: {
-          createdAt: {
-            [Sequelize.Op.lt]: fromCursorHash(cursor),
-          },
-        },
-      }
-      : {};
-      
-      const articles = await models.Articles.findAll({
-        order: [['createdAt', 'DESC']],
-        limit: limit + 1,
-        ...cursorOptions,
-      });
-
-      const hasNextPage = articles.length > limit;
-      const edges = hasNextPage ? articles.slice(0, -1) : articles;
-
-      return {
-        edges,
-        pageInfo: {
-          hasNextPage,
-          endCursor: toCursorHash(
-            edges[edges.length -1].createdAt.toString(),
-          ),
-        },
-      };
+      return await models.Article.findAll();
     },
     article: async (parent, {
       id
     }, {
       models
     }) => {
-      return await models.Article.findById(id);
+      return await models.Article.findByPk(id);
     },
   },
 

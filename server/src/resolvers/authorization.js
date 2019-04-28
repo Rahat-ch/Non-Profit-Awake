@@ -24,3 +24,21 @@ export const isArticleOwner = async(
     }
     return skip;
 };
+
+export const isPetitionOwner = async (
+    parent, {
+        id
+    }, {
+        models,
+        me
+    },
+) => {
+    const petition = await models.Petition.findByPk(id, {
+        raw: true
+    });
+
+    if (petition.userId !== me.id) {
+        throw new ForbiddenError('Not authenticated as owner.');
+    }
+    return skip;
+};
