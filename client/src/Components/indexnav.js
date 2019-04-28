@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import "../../../app/assets/stylesheets/navbar/navbar.css"";
-import Signup from "../modals/signup_modal";
+import Signup from "./signup_modal";
 
 const Navbar = () => {
   const indexPageNavbar = () => {
