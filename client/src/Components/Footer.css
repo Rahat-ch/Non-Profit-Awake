@@ -1,0 +1,28 @@
+Footer{
+  margin:0; /*gets rid of white space around body*/
+  height:200vh;
+  background:url("https://static.pexels.com/photos/1440/city-road-street-buildings.jpg") no-repeat center / contain;
+  background-color: #D9CEAE;
+  position:relative; /*REQUIRED Sets up positioning for your footer*/
+}
+
+#sticky {
+  width:100%;
+  padding:20px;
+  padding-bottom:16px;
+  background:rgba(0, 0, 0, .25);
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+  text-align:center;
+  position:fixed;    /*Here's what sticks it*/
+  bottom:0;          /*to the bottom of the body*/
+  left:0;            /*and to the left of the body.*/
+  
+  /*EFFECTS*/
+  transition:.33s linear;
+}
+
+#sticky:hover {
+  background:black;
+}
