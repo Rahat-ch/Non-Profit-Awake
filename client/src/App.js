@@ -9,13 +9,19 @@ import {
 import Navbar from "./components/navbar/indexnav";
 // import './App.css';
 
+import Homepage from './Components/homscreen';
+
 function App() {
   return (
     <div className="App">
 
       <header className="App-header">
+
+        <Homepage/>
+
         <h1>Hello Hackers and Team Non-Profit Awake</h1>
         <p>description: Helping non-profit get exposure</p>
+
       </header>
 
       <BrowserRouter>
