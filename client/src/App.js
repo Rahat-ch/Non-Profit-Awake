@@ -13,6 +13,7 @@ function App() {
       <header className="App-header">
         <h1>Hello Hackers and Team Non-Profit Awake</h1>
         <p>description: Helping non-profit get exposure</p>
+        <p>Delete this line</p>
       </header>
       <Found /> 
       <Founder />
