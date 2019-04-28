@@ -9,15 +9,7 @@
   height: 250px;
   /* position: absolute; */
 }
-/* #homeScreen >h1{
-  font-size: 50px;
-}
-#homeScreen >p{
-  position: absolute;
-  font-size: 15px;
-  width: 700px;
-  margin-left: 25%;
-} */
+
 #featureOrgs{
   margin-top: 20%;
   /* height: 0px;; */
@@ -28,10 +20,7 @@
   margin-top: 50px;
   /* border: solid black; */
 }
-/* #staticArticles{
-  border: solid blue;
-  height: 200px;
-} */
+
 .slick-slider{
   height: 350px;
 
